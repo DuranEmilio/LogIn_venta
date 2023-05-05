@@ -34,15 +34,17 @@ pedido.click()
 order = driver.find_element(By.XPATH, '//*[@id="orderTypeOrders"]/div[2]')
 order.click()
 
-# categories = driver.find_element(By.ID, 'categorys-container')
-b = driver.find_element(By.XPATH,'//*[@id="categorys-container"]/div[3]')
-driver.execute_script("arguments[0].click();", b)
-time.sleep(5)
+category = driver.find_element_by_xpath('//*[@id="categorys-container"]/div[3]')
+driver.execute_script("arguments[0].click();", category)
+time.sleep(5)                                                                                              
 
-pay = driver.find_element(By.ID, 'btnPayOrder')
-pay.click()
+# pay = driver.find_element(By.ID, 'btnPayOrder')
+# pay.click()
 
-paylast = WebDriverWait(driver,10).until(
-EC.element_to_be_clickable((By.ID, 'btnPagar')))
-paylast.click()
-time.sleep(5)
+# paylast = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((By.ID, 'btnPagar')))
+# paylast.click()
+# time.sleep(5)
+
+
+
